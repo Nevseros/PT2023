@@ -8,6 +8,9 @@
 // Подключение стандартной библиотеки <iostream>
 #include <iostream>
 
+//using namespace std;
+
+
 //функция main - основное тело программы
 //int main() {
 //    int a;      // объявляем целочисленную переменную a
@@ -194,7 +197,7 @@ void func2()
 //}
 
 
-// Логический тип переменной
+// Логический тип переменных
 void check_bool(bool flag){
     
     //Обычно логические переменные используются в условных операторах
@@ -238,4 +241,154 @@ void check_bool(bool flag){
 
 
 
+// Массивы
+//int main(){
+//    // объявим массив из пяти целых чисел
+//    int array[5]; // массив из пяти чисел
+//
+//    array[0] = 3; // индекс первого элемента - 0 (нулевой элемент)
+//    array[1] = 2;
+//    array[2] = 4;
+//    array[3] = 8;
+//    array[4] = 12; // индекс последнего элемента - 4
+//
+//    std::cout << "The array element with the smallest index has the value " << array[0] << "\n";
+//    std::cout << "The sum of the first 5 numbers is " << array[0] + array[1] + array[2] + array[3] + array[4] << "\n";
+//
+//    return 0;
+//}
 
+
+
+//Циклы
+//int main(){
+//
+//    for (int count = 0; count < 10; ++count)
+//        std::cout << count << " ";
+//
+//    int count = 0;
+//    while (count < 10)
+//    {
+//        std::cout << count << " ";
+//        ++count;
+//    }
+//
+//
+//     Переменная choice должна быть объявлена вне цикла do while
+//    int choice;
+//
+//    do
+//    {
+//        std::cout << "Please make a selection: \n";
+//        std::cout << "1) Addition\n";
+//        std::cout << "2) Subtraction\n";
+//        std::cout << "3) Multiplication\n";
+//        std::cout << "4) Division\n";
+//        std::cin >> choice;
+//    }
+//    while (choice != 1 && choice != 2 &&
+//        choice != 3 && choice != 4);
+//
+//    // Что-то делаем с переменной choice, например, используем оператор switch
+//
+//    std::cout << "You selected option #" << choice << "\n";
+//
+//    return 0;
+//}
+
+
+
+
+//Циклы c массивами
+//int main(){
+//    // еще один способ инициализировать массив
+//    int students[] = { 73, 85, 84, 44, 78};
+//
+//    const int numStudents = sizeof(students) / sizeof(students[0]);
+//    int totalScore = 0;
+//
+//    // Используем цикл для вычисления totalScore
+//    for (int person = 0; person < numStudents; ++person){
+//        totalScore += students[person];
+//        std::cout << person << "\t" << students[person] << std::endl;
+//    }
+//    std::cout << totalScore << std::endl;
+//}
+//
+
+
+//Указатели
+//int main(){
+//
+//    int *iPtr; // указатель на значение типа int
+//    double *dPtr; // указатель на значение типа double
+//
+//    int a = 7;
+//    double d = 3.5;
+//
+//    std::cout << a << std::endl;     // выводим значение переменной a
+//    std::cout << &a << std::endl;    // выводим адрес переменной a
+//    std::cout << *&a << std::endl;   // выводим значение ячейки памяти переменной a
+//
+//    iPtr = &a;
+//    dPtr = &d;
+//
+//    std::cout << *iPtr << std::endl;
+//    std::cout << *dPtr << std::endl;
+//
+//    return 0;
+//}
+
+
+// Пример
+//int i_increase(int x){
+//    x = x+1;
+//    return x;
+//}
+//
+//void v_increase(int *x){
+//    *x = *x+1;
+//}
+//
+//int main(){
+//
+//    int x=10;
+//    int y;
+//
+//    y = i_increase(x);
+//
+//    std::cout << "x:" << x << "\ny:" << y << std::endl;
+//    std::cout << "-----" << std::endl;
+//
+//    v_increase(&x);
+//
+//    std::cout << "x:" << x << "\ny:" << y << std::endl;
+//
+//
+//    return 0;
+//}
+
+
+
+//Передача массивов в функции
+//void printSize(int *array)
+//{
+//    // Здесь массив рассматривается как указатель
+//    std::cout << sizeof(array) << '\n'; // выведется размер указателя, а не длина массива
+//
+//    // Мы также можем изменять значения в массиве
+//    array[0] = 100;
+//}
+//
+//int main()
+//{
+//    int array[] = {1, 2, 3, 4, 4, 9, 15, 25};
+//    std::cout << sizeof(array) << '\n'; // выведется sizeof(int) * длина массива
+//
+//    std::cout << "Element 0 has value: " << array[0] << '\n';
+//
+//    printSize(array); // здесь аргумент array распадается на указатель
+//    std::cout << "Element 0 has value: " << array[0] << '\n';
+//
+//    return 0;
+//}
