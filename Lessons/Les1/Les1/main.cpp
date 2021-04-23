@@ -62,9 +62,10 @@ int getValueFromUser()
 
 //int main()
 //{
+//    int a, b;
 //    returnNothing();
-//    int a = getValueFromUser(); // первый вызов функции getValueFromUser()
-//    int b = getValueFromUser(); // второй вызов функции getValueFromUser()
+//    a = getValueFromUser(); // первый вызов функции getValueFromUser()
+//    b = getValueFromUser(); // второй вызов функции getValueFromUser()
 //    std::cout << a << " + " << b << " = " << a + b << std::endl;
 //
 //   return 0;
@@ -81,15 +82,17 @@ void printValue(int a)
 // Эта функция имеет два параметра типа int: a и b
 // Функция add() принимает два целых числа в качестве параметров и возвращает их сумму
 // Значения a и b определяет caller
-int add(int a, int b)
-{
-   return a + b;
-}
+//int add(int a, int b)
+//{
+//   return a + b;
+//}
 
 //int main()
 //{
+//    int s;
 //    printValue(7); // 7 – это аргумент функции printValue()
-//    add(4, 5); // 4 и 5 – это аргументы функции add()
+//    s = add(4, 5); // 4 и 5 – это аргументы функции add()
+//    std::cout << s << std::endl;
 //
 //   return 0;
 //}
@@ -188,7 +191,7 @@ void func2()
 //    float floatValue;
 //    double doubleValue;
 //    long double doubleValue2;
-
+//
 //    char ch1(97);  // инициализация переменной типа char целым числом 97
 //    char ch2('a'); // инициализация переменной типа char символом 'a' (97)
 //
@@ -198,17 +201,17 @@ void func2()
 
 
 // Логический тип переменных
-void check_bool(bool flag){
-    
-    //Обычно логические переменные используются в условных операторах
-    if (flag){
-        std::cout << "flag is true" << std::endl;
-    }
-    else {
-        std::cout << "flag is false" << std::endl;
-    }
-}
-
+//void check_bool(bool flag){
+//
+//    //Обычно логические переменные используются в условных операторах
+//    if (flag){
+//        std::cout << "flag is true" << std::endl;
+//    }
+//    else {
+//        std::cout << "flag is false" << std::endl;
+//    }
+//}
+//
 //int main(){
 //    bool test_flag = false;
 //
@@ -228,7 +231,7 @@ void check_bool(bool flag){
 //
 //
 //    //Если в условный оператор if передать не нулевое число, то выполнится тело if
-//    int a = 123;
+//    int a = 0;
 //    if (a){
 //        std::cout << "if body" << std::endl;
 //    }
@@ -263,8 +266,9 @@ void check_bool(bool flag){
 //Циклы
 //int main(){
 //
-//    for (int count = 0; count < 10; ++count)
+//    for (int count = 0; count < 5; ++count) {
 //        std::cout << count << " ";
+//    }
 //
 //    int count = 0;
 //    while (count < 10)
@@ -274,7 +278,7 @@ void check_bool(bool flag){
 //    }
 //
 //
-//     Переменная choice должна быть объявлена вне цикла do while
+//////    Переменная choice должна быть объявлена вне цикла do while
 //    int choice;
 //
 //    do
@@ -309,7 +313,7 @@ void check_bool(bool flag){
 //
 //    // Используем цикл для вычисления totalScore
 //    for (int person = 0; person < numStudents; ++person){
-//        totalScore += students[person];
+//        totalScore += students[person]; // totalScore = totalScore + students[person];
 //        std::cout << person << "\t" << students[person] << std::endl;
 //    }
 //    std::cout << totalScore << std::endl;
@@ -333,6 +337,7 @@ void check_bool(bool flag){
 //    iPtr = &a;
 //    dPtr = &d;
 //
+//    std::cout << iPtr << std::endl;
 //    std::cout << *iPtr << std::endl;
 //    std::cout << *dPtr << std::endl;
 //
@@ -347,12 +352,12 @@ void check_bool(bool flag){
 //}
 //
 //void v_increase(int *x){
-//    *x = *x+1;
+//    *x += 1;
 //}
 //
 //int main(){
 //
-//    int x=10;
+//    int x = 10;
 //    int y;
 //
 //    y = i_increase(x);
@@ -392,3 +397,58 @@ void check_bool(bool flag){
 //
 //    return 0;
 //}
+
+//Задача 1
+//int add(int a, int b){
+//    int s = 0;
+//    s = a + b;
+//    return s;
+//}
+//
+//int main() {
+//    int a, b, sum;
+//
+//    // Пользователь вводит два значения с клавиатуры (std::cin)
+//    std::cout << "Введите первое значение: ";
+//    std::cin >> a;
+//
+//    std::cout << "Введите второе значение: ";
+//    std::cin >> b;
+//
+//    // Используя функцию add складываем эти два значения
+//    sum = add(a,b);
+//
+//    // выводим на экран их сумму
+//    std::cout << a << "+" << b << "=" << sum <<std::endl;
+//}
+
+
+//Задача 2
+int sum(int *array, int array_length){
+    int res = 0;
+    // суммируем все элементы массива с помощью цикла
+    for (int i = 0; i < array_length; ++i) {
+        res += array[i];
+    }
+    return res;
+}
+
+int main(){
+    int array[5] = {1,2,3,4,5};
+    int len = sizeof(array) / sizeof(array[0]);
+    int s;
+
+
+    // создаем цикл в котором пользователь заполняет массив с клавиатуры
+    for (int i = 0; i < len; ++i) {
+        std::cout << "Введите значение элемента с индексом " << i << ": ";
+        std::cin >> array[i];
+    }
+
+    // используем функцию sum(array, len) для получения суммы всех элементов массива
+    s = sum(array, len);
+
+    // выводим сумму
+    std::cout << "Сумма всех элементов: " << s << std::endl;
+    return 0;
+}
