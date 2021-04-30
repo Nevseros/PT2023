@@ -38,7 +38,7 @@ int main(){
     
     //Динамически выделим еще один экземпляр
     Student *second_student = new Student;
-        
+            
     // задаем значения полей для указателя
     (*second_student).name = "Oleg";    // доступ к полю указателя
     second_student->age = 18;           // аналогичный способ доступа

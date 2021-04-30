@@ -30,7 +30,7 @@ void print_list(Student *a){
 }
 
 int main(){
-    // объявляем переменную типа Student
+    // объявляем указатель типа Student
     Student *students = NULL;
     
     print_list(students);
@@ -51,28 +51,28 @@ int main(){
     print_list(students);
     
     cout << "-------" << endl;
-    
-    
+
+
     // Добавим еще одного студента
     Student *tmp = students;
-    
+
     //Найдем последний элемент (конец списка)
     while(tmp -> next)
         tmp = tmp->next;
-    
+
     Student *new_student2 = new Student;
     new_student2->id = 2;
     new_student2->name = "Oleg";
     new_student2->age = 18;
     new_student2->score = 75;
     new_student2->next = NULL;
-    
+
     //Запишем нового студента в конец
     tmp->next = new_student2;
 
     print_list(students);
-    
-    
+
+
     cout << "-------" << endl;
 
     //Попробуем добавить нового студента в начало списка
@@ -83,7 +83,7 @@ int main(){
     new_student3->score = 80;
     new_student3->next = students;
     students = new_student3;
-    
+
     print_list(students);
     
     return 0;
