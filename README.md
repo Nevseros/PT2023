@@ -5,3 +5,5 @@
 
 #### Лабораторные работы:
 * [Лабораторная работа №1](https://github.com/volkserg/PT2021/tree/main/Labs/Lab1)
+* [Лабораторная работа №2](https://github.com/volkserg/PT2021/tree/main/Labs/Lab2)
+
