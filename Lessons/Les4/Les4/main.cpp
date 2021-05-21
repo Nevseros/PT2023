@@ -1,7 +1,35 @@
 #include <iostream>
 #include "matrix.hpp"
 
+
+void exception_example(int a){
+    
+    int d = 5;
+    double *array = new double[d]{1,2,3,4,5};
+    Vector v1(d, array);
+    
+    if (a==0) throw "Some error happens";
+    else throw -1;
+    
+//    std::cout << "This will not be printed" << std::endl;
+}
+
 int main(int argc, const char * argv[]) {
+    
+    // пример обработки исключений
+    try {
+        exception_example(0);
+        std::cout << "code in try block" << std::endl;
+    }
+    catch(const char *exception) {
+        std::cout<< "do something with exception #1:"<< exception <<std::endl;
+    }
+    catch(int exception){
+        std::cout << "do something with exception #2: "<< exception<<std::endl;
+    }
+    std::cout<<std::endl;
+    
+    
     
     int d = 5;
     double *array = new double[d]{1,2,3,4,5};

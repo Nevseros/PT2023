@@ -11,7 +11,7 @@ Matrix::Matrix(int d)
     number=countmatr;
     dim=d;
     
-    b=new double*[dim];
+    b=new double *[dim];
     for(int i=0;i<dim;i++)
     {
         b[i]=new double[dim];

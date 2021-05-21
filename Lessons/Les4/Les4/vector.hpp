@@ -12,6 +12,7 @@ private:
     
 //    friend Vector operator+(Vector &vect1, Vector &vect2);
     friend Vector vec_sum(Vector &vect1, Vector &vect2);
+    friend class Matrix;
     
 public:
     static int count;
@@ -22,8 +23,8 @@ public:
     
     Vector operator+(Vector &vect2);
     
-    int get_dim(){return dim;}
-    void set_dim(int d){dim = d;}
+    int get_dim();
+    void set_dim(int d);
     
     void print();
 };
