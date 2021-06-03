@@ -8,5 +8,4 @@
 * [Лабораторная работа №1](https://github.com/volkserg/PT2021/tree/main/Labs/Lab1)
 * [Лабораторная работа №2](https://github.com/volkserg/PT2021/tree/main/Labs/Lab2)
 * [Лабораторная работа №3](https://github.com/volkserg/PT2021/tree/main/Labs/Lab3)
-
-
+* [Лабораторная работа №4](https://github.com/volkserg/PT2021/tree/main/Labs/Lab4)
